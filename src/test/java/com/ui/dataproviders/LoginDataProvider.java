@@ -3,6 +3,7 @@ package com.ui.dataproviders;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -20,7 +21,9 @@ public class LoginDataProvider {
 	@DataProvider(name = "LoginTestDataProvider")
 	public Iterator<Object[]> loginDataProvider() throws FileNotFoundException {
 		Gson gson = new Gson();
-		File testDataFile = new File(System.getProperty("user.dir") + "\\testData\\logindata.json");
+		// File testDataFile = new File(System.getProperty("user.dir") + "\\testData\\logindata.json");
+		String filePath = Paths.get(System.getProperty("user.dir"), "testData", "logindata.json").toString();
+		File testDataFile = new File(filePath);
 		FileReader fileReader = new FileReader(testDataFile);
 		TestData data = gson.fromJson(fileReader, TestData.class);// De-serialization
 		List<Object[]> dataToReturn = new ArrayList<Object[]>();
