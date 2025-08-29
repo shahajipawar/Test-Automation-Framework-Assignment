@@ -3,6 +3,7 @@ package com.utility;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.nio.file.Paths;
 
 import com.constants.Env;
 import com.google.gson.Gson;
@@ -13,7 +14,9 @@ public class JSONUtility {
 
 	public static Environement readJSON(Env env) {
 		Gson gson = new Gson();
-		File jsonFile = new File(System.getProperty("user.dir") + "\\Config\\config.json");
+		// File jsonFile = new File(System.getProperty("user.dir") + "\\Config\\config.json");
+		String filePath = Paths.get(System.getProperty("user.dir"), "Config", "config.json").toString();
+		File jsonFile = new File(filePath);
 		FileReader fileReader = null;
 		try {
 			fileReader = new FileReader(jsonFile);
