@@ -128,7 +128,7 @@ public abstract class BrowserUtility {// parent class marked with Abstract keywo
 		String timeStamp = format.format(date);
 
 		//String path = System.getProperty("user.dir") + "//Screenshots//" + name + " " + timeStamp + ".png";
-		String path = "./Screenshots/" + name + " " + timeStamp + ".png";
+		String path = "./screenshots/" + name + " " + timeStamp + ".png";
 		File screenshotFile = new File(path);
 		try {
 			FileUtils.copyFile(screenshotData, screenshotFile);
