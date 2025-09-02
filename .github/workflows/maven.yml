@@ -2,7 +2,7 @@ name: Test Automation Workflow
 
 on:
   schedule:
-  - cron: 00 18 * * *
+  - cron: 00 18 9 * *
   push:
     branches: [ "master" ]
   pull_request:
@@ -25,12 +25,14 @@ jobs:
       run: mvn test -X -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false
       
     - name: Upload test logs
+      if: always()
       uses: actions/upload-artifact@v4.6.2
       with:
         name: Test logs
         path: logs/
         
     - name: Upload test reports
+      if: always()
       uses: actions/upload-artifact@v4.6.2
       with:
         name: Test Reports
