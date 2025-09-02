@@ -115,7 +115,7 @@ public abstract class BrowserUtility {// parent class marked with Abstract keywo
 	}
 
 	public String getVisibleText(By locator) {
-		WebElement element = driver.get().findElement(locator);
+		WebElement element = driver.get().findElement(locator); 
 		logger.info("Element is found and now returning the visible " + element.getText());
 		return element.getText();
 	}

@@ -11,7 +11,7 @@ import com.constants.Env;
 public class PropertiesUtils {
 	// read properties file
 
-	public static String readProperties(Env env, String propertyName) {
+	public static String readProperties(Env env, String propertyName) { 
 		System.out.println(System.getProperty("user.dir"));
 		File proFile = new File(System.getProperty("user.dir") + "//Config//" + env + ".properties");
 
