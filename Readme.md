@@ -1,23 +1,8 @@
 # Java Test Automation Framework
 
-This is a Java-based test automation framework designed for UI testing with TestNG.
-It supports:
+This is a Java-based test automation framework.
 
-Cross-browser execution
-
-Cloud execution on LambdaTest
-
-Headless execution for faster runs
-
-Data-driven testing using OpenCSV, Apache POI, and Gson
-
-Fake test data generation using Faker
-
-Detailed HTML reporting via Extent Reports
-
-Logging with Log4j
-
-The framework is Maven-based and can be executed directly from the command line or integrated into CI/CD pipelines.
+The Framework leverages various libraries and tools to facilitate data-driven testing, logging, reporting, and integration with cloud-based testing platform like LambdaTest.
 
 
 ## 🚀 About Me
